@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="styles/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>todo</title>
+  </head>
+  <body>
+    <header>
+      <img src="/styles/logo.svg" alt="logo-icon" />
+      <h1>to<span>do</span></h1>
+    </header>
+
+    <div class="task-form">
+      <form id="task-form">
+        <input
+          type="text"
+          id="task-input"
+          autocomplete="off"
+          placeholder="Add a new task"
+        />
+        <button type="Submit">Add</button>
+      </form>
+    </div>
+
+    <div class="tasks-container">
+      <div class="tasks-info">
+        <div>
+          <h2>Tasks created</h2>
+          <div id="task-counter"></div>
+        </div>
+
+        <div>
+          <h2><span>Completed</span></h2>
+          <div id="task-completed-counter"></div>
+        </div>
+      </div>
+
+      <div class="tasks-list"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

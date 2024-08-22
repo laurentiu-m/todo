@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  background-color: #1A1A1A;
+  color: #F2F2F2;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 250px;
+  gap: 12px;
+  background-color: #0D0D0D;
+}
+header img {
+  width: 65px;
+  height: 65px;
+}
+header h1 {
+  font-size: 65px;
+  font-weight: 900;
+  color: #4EA8DE;
+}
+header h1 span {
+  color: #8284FA;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
+  width: 736px;
+  height: 54px;
+}
+form input {
+  width: 638px;
+  height: 100%;
+  padding: 16px;
+  background: #262626;
+  border: 1px solid #0D0D0D;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #F2F2F2;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+form input:focus {
+  border-color: #8284FA;
+}
+form input::-moz-placeholder {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+form input::placeholder {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+form button {
+  width: 90px;
+  height: 100%;
+  background-color: #1E6F9F;
+  font-size: 16px;
+  font-weight: 700;
+  color: #F2F2F2;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+form button:hover {
+  filter: brightness(120%);
+}
+
+.task-input-error {
+  border-color: #E25858;
+}
+.task-input-error::-moz-placeholder {
+  color: #E25858;
+}
+.task-input-error::placeholder {
+  color: #E25858;
+}
+
+.tasks-container {
+  width: 736px;
+  margin-top: 100px;
+}
+
+.tasks-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.tasks-info div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.tasks-info div h2 {
+  font-size: 14px;
+  color: #4EA8DE;
+}
+.tasks-info div h2 span {
+  color: #8284FA;
+}
+.tasks-info div div {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 2px 8px;
+  background-color: #333333;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 30px 0;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 0;
+  border-top: 1px solid #333333;
+  border-radius: 10px 10px 0 0;
+  gap: 15px;
+  color: #808080;
+  font-size: 16px;
+}
+.empty img {
+  width: 100px;
+  height: 100px;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 20px;
+  background-color: #262626;
+  border: 1px solid #333333;
+  border-radius: 8px;
+}
+.task-container .submit-button {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4EA8DE;
+  border-radius: 100%;
+  background: none;
+  cursor: pointer;
+}
+.task-container p {
+  width: 80%;
+  text-align: left;
+  overflow-wrap: break-word;
+  font-size: 14px;
+  line-height: 22px;
+}
+.task-container .delete-button {
+  background-image: url("trash-bin.svg");
+  background-size: cover;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.task-completed-button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 100%;
+  background-image: url("checkmark.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #8284FA;
+  pointer-events: none;
+}
+
+.task-completed-text {
+  text-decoration: line-through;
+  color: #808080;
+}/*# sourceMappingURL=styles.css.map */

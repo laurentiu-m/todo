@@ -1,0 +1,165 @@
+@import "./_reset"
+@import "./_variables"
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap')
+
+@mixin flex($direction, $align, $justify)
+  display: flex
+  flex-direction: $direction
+  align-items: $align
+  justify-content: $justify
+
+body
+  @include flex(column, center, center)
+  font-family: "Inter", sans-serif
+  background-color: $backgroundColor
+  color: $textColor
+
+header
+  @include flex(row, center, center)
+  width: 100%
+  height: 250px
+  gap: 12px
+  background-color: $headerBackgroundColor
+  img
+    width: 65px
+    height: 65px
+  h1
+    font-size: 65px
+    font-weight: 900
+    color: $primaryColor
+    span
+      color: $secondColor
+
+.task-form
+  @include flex(column, center, center)
+  position: relative
+
+form
+  @include flex(row, center, space-between)
+  position: absolute
+  top: 100%
+  transform: translateY(-50%)
+  width: 736px
+  height: 54px
+  input
+    width: 638px
+    height: 100%
+    padding: 16px
+    background: $inputBackgroundColor
+    border: 1px solid $inputBorderColor
+    border-radius: 8px
+    font-size: 16px
+    font-weight: 500
+    color: $textColor
+    outline: none
+    transition: border-color 0.2s ease-in-out
+    &:focus
+      border-color: $secondColor
+    &::placeholder
+      font-family: "Inter", sans-serif
+      font-weight: 500
+  button
+    width: 90px
+    height: 100%
+    background-color: $buttonColor
+    font-size: 16px
+    font-weight: 700
+    color: $textColor
+    border: none
+    border-radius: 8px
+    cursor: pointer
+    transition: all 0.2s ease-in-out
+    &:hover
+      filter: brightness(120%)
+
+.task-input-error
+  border-color: $errorColor
+  &::placeholder
+    color: $errorColor
+
+.tasks-container
+  width: 736px
+  margin-top: 100px
+
+.tasks-info
+  @include flex(row, center, space-between)
+  div
+    @include flex(row, center, center)
+    gap: 10px
+    h2
+      font-size: 14px
+      color: $primaryColor
+      span
+        color: $secondColor
+    div
+      display: inline-block
+      white-space: nowrap
+      padding: 2px 8px
+      background-color: $grayColor
+      border-radius: 999px
+      font-size: 12px
+      font-weight: 700
+      text-align: center
+
+.tasks-list
+  @include flex(column, center, center)
+  gap: 10px
+  padding: 30px 0
+
+.empty
+  @include flex(column, center, center)
+  width: 100%
+  padding: 40px 0
+  border-top: 1px solid $grayColor
+  border-radius: 10px 10px 0 0
+  gap: 15px
+  color: $secondTextColor
+  font-size: 16px
+  img
+    width: 100px
+    height: 100px
+
+.task-container
+  @include flex(row, center, space-between)
+  width: 100%
+  padding: 20px 20px
+  background-color: $inputBackgroundColor
+  border: 1px solid $grayColor
+  border-radius: 8px
+  .submit-button
+    width: 20px
+    height: 20px
+    border: 2px solid $primaryColor
+    border-radius: 100%
+    background: none
+    cursor: pointer
+  p
+    width: 80%
+    text-align: left
+    overflow-wrap: break-word
+    font-size: 14px
+    line-height: 22px
+  .delete-button
+    background-image: url("trash-bin.svg")
+    background-size: cover
+    background-color: transparent
+    background-repeat: no-repeat
+    width: 25px
+    height: 25px
+    border: none
+    cursor: pointer
+
+.task-completed-button
+  width: 20px
+  height: 20px
+  border: none
+  border-radius: 100%
+  background-image: url("checkmark.svg")
+  background-size: cover
+  background-repeat: no-repeat
+  background-color: $secondColor
+  pointer-events: none
+
+.task-completed-text
+  text-decoration: line-through
+  color: $secondTextColor
